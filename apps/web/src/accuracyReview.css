@@ -1,0 +1,168 @@
+.accuracy-review-backdrop{z-index:120;align-items:center;padding:16px;overflow:auto}
+.viewer-report-frame{display:inline-flex;align-items:center;gap:4px;min-height:25px;padding:0 7px;border:1px solid #bcdedb;border-radius:5px;background:#f2fbf9;color:#167f79;font-size:8px;font-weight:650;white-space:nowrap}
+.viewer-report-frame:hover:not(:disabled){background:#e4f6f2;border-color:#8acbc3}
+.accuracy-reportable-box{z-index:2;cursor:pointer}
+.accuracy-reportable-box:hover,.accuracy-reportable-box:focus-visible{outline:2px solid #ffe082;outline-offset:1px;background:#ffe08218}
+.accuracy-reportable-box:focus-visible{z-index:4}
+.modal-card.accuracy-review-dialog{width:min(1120px,calc(100vw - 32px));max-width:none;max-height:min(94vh,940px);overflow:auto;padding:19px}
+.accuracy-review-dialog>.modal-heading{align-items:flex-start;margin-bottom:10px}
+.accuracy-review-dialog>.modal-heading h2{margin:0;color:#26374a;font-size:17px}
+.accuracy-review-dialog>.modal-heading p{margin:5px 0 0;color:#748392;font-size:9px;line-height:1.4}
+.accuracy-review-identity{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:7px 9px;border:1px solid #e5ecef;border-radius:6px;background:#f8fafb;color:#71808e;font-size:8px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.accuracy-immutable-badge{margin-left:auto;padding:3px 7px;border-radius:10px;background:#e6f5f2;color:#17867f;font-weight:650;font-variant-numeric:normal}
+.accuracy-review-tabs{display:flex;gap:4px;margin:11px 0 12px;border-bottom:1px solid #e7ecef}
+.accuracy-review-tabs button{min-height:32px;padding:0 11px;border:0;border-bottom:2px solid transparent;background:transparent;color:#748290;font-size:9px;font-weight:600}
+.accuracy-review-tabs button[aria-selected=true]{border-bottom-color:#14938d;color:#17847e}
+.accuracy-review-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:16px;align-items:start;min-height:380px}
+.accuracy-evidence-column,.accuracy-form-column{min-width:0}
+.accuracy-evidence-header{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-bottom:7px;color:#435568;font-size:10px}
+.accuracy-evidence-header>span{display:flex;align-items:center;gap:5px;color:#748391;font-size:8px}
+.accuracy-evidence-stage{position:relative;width:100%;max-height:46vh;overflow:hidden;border:1px solid #172536;border-radius:6px;background:#111a23;touch-action:none;user-select:none;cursor:default}
+.accuracy-evidence-stage:has(.accuracy-missed-box),.accuracy-evidence-stage:has(.accuracy-correction-box){cursor:crosshair}
+.accuracy-evidence-stage>img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.accuracy-evidence-boxes{position:absolute;inset:0;pointer-events:none}
+.accuracy-evidence-box{position:absolute;border:1px solid #48d3b7;background:#37c0a414}
+.accuracy-evidence-box.selected{border:2px solid #ffe082;background:#ffe08220}
+.accuracy-missed-box{border:2px solid #ff7169;background:#ff716926}
+.accuracy-correction-box{border-color:#67b8ff;background:#67b8ff24}
+.accuracy-evidence-placeholder{display:flex;min-height:200px;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:22px;border:1px dashed #cdd9de;border-radius:7px;background:#f8fafb;color:#738291;text-align:center;font-size:9px;line-height:1.5}
+.accuracy-evidence-placeholder strong{color:#3d5266;font-size:11px}
+.accuracy-draw-help{margin:6px 0;color:#72818e;font-size:8px;line-height:1.4}
+.accuracy-detection-list{display:grid;gap:4px;margin-top:10px}
+.accuracy-detection-list>strong{margin-bottom:2px;color:#485c70;font-size:9px}
+.accuracy-detection-list>button{display:flex;align-items:center;gap:8px;min-width:0;min-height:31px;padding:5px 7px;border:1px solid #e6ecef;border-radius:5px;background:#fff;color:#526476;text-align:left;font-size:8px}
+.accuracy-detection-list>button.selected{border-color:#58b7ae;background:#f0faf8;color:#1d7772}
+.accuracy-detection-list>button>span:nth-child(2){flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.accuracy-detection-index{display:grid;place-items:center;width:19px;height:19px;flex:none;border-radius:50%;background:#edf2f4;color:#526476;font-size:8px;font-weight:700}
+.accuracy-track-open{min-height:30px;height:30px;margin-top:8px;padding-inline:9px;font-size:8px}
+.accuracy-untracked-note{margin:7px 0 0;color:#8a6a40;font-size:8px;line-height:1.4}
+.accuracy-feedback-form{display:grid;gap:10px;padding:12px;border:1px solid #e5ecef;border-radius:7px;background:#fbfcfd}
+.accuracy-form-header{display:flex;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid #e7ecef}
+.accuracy-form-header>div{display:grid;gap:4px}
+.accuracy-form-header strong{color:#3c5064;font-size:10px}
+.accuracy-form-header span{color:#84919d;font-size:8px;line-height:1.4}
+.accuracy-field{display:grid;gap:5px;color:#627487;font-size:8px;font-weight:600}
+.accuracy-field select,.accuracy-field textarea{width:100%;min-width:0;min-height:33px;padding:6px 8px;border:1px solid #dce5e9;border-radius:5px;background:#fff;color:#34495d;font-size:9px;font-weight:400}
+.accuracy-field textarea{min-height:70px;resize:vertical;line-height:1.45}
+.accuracy-field small{color:#85929e;font-size:8px;font-weight:400;line-height:1.4}
+.accuracy-optional{color:#91a0ab;font-weight:400}
+.accuracy-bbox-state{padding:7px 8px;border:1px dashed #d8e2e6;border-radius:5px;color:#758492;font-size:8px;line-height:1.4}
+.accuracy-checkbox{display:flex;align-items:center;gap:6px;color:#647789;font-size:8px}
+.accuracy-checkbox input{accent-color:#168f88}
+.accuracy-box-coordinates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.accuracy-box-coordinates label{display:grid;gap:3px;min-width:0;color:#748391;font-size:7px}
+.accuracy-box-coordinates input{width:100%;min-width:0;height:29px;padding:4px 5px;border:1px solid #dce5e9;border-radius:4px;background:#fff;color:#34495d;font-size:8px}
+.accuracy-partial-callout,.accuracy-identity-note{display:flex;align-items:flex-start;gap:7px;padding:8px;border:1px solid #d9e9e7;border-radius:6px;background:#f0f8f7;color:#5c7778;font-size:8px;line-height:1.45}
+.accuracy-partial-callout svg,.accuracy-identity-note svg{flex:none;color:#188d85}
+.accuracy-review-dialog .modal-actions{display:flex;justify-content:flex-end;gap:6px;margin-top:1px}
+.accuracy-review-dialog .modal-actions .button{height:33px;font-size:9px}
+.accuracy-inline-error,.accuracy-report-error{display:flex;align-items:center;gap:7px;padding:8px;border-radius:5px;background:#fff0ef;color:#a8453d;font-size:8px;line-height:1.45;overflow-wrap:anywhere}
+.accuracy-inline-error>svg,.accuracy-report-error>svg{flex:none}
+.accuracy-success{display:flex;align-items:center;gap:6px;color:#16836f;font-size:8px;line-height:1.45}
+.accuracy-loading{display:flex;align-items:center;justify-content:center;gap:7px;min-height:80px;color:#71808e;font-size:9px}
+.accuracy-empty{padding:19px 10px;color:#788795;text-align:center;font-size:9px;line-height:1.5}
+.accuracy-reports-panel{min-width:0}
+.accuracy-reports-panel.compact{border:0;box-shadow:none;background:transparent}
+.accuracy-reports-panel.compact>.panel-heading{padding:5px 0 10px}
+.accuracy-reports-panel.compact>.panel-heading h2{font-size:12px}
+.accuracy-report-filter{display:flex;align-items:center;gap:5px;color:#758391;font-size:8px}
+.accuracy-report-filter select{height:29px;max-width:120px;border:1px solid #dfe7ea;border-radius:5px;background:#fff;color:#536576;padding:0 7px;font-size:8px}
+.accuracy-report-list{display:grid;gap:7px;max-height:400px;overflow:auto;overscroll-behavior:contain;padding:1px}
+.accuracy-reports-panel:not(.compact) .accuracy-report-list{max-height:none}
+.accuracy-report-card{min-width:0;padding:9px;border:1px solid #e5ecef;border-radius:6px;background:#fff}
+.accuracy-report-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.accuracy-report-kind{color:#34495d;font-size:9px;font-weight:650}
+.accuracy-review-status{display:inline-flex;align-items:center;gap:4px;flex:none;padding:3px 6px;border-radius:10px;background:#f1f4f5;color:#73818e;font-size:7px}
+.accuracy-review-status.reviewed{background:#e8f7f2;color:#177e69}
+.accuracy-review-status.dismissed{background:#fff3e8;color:#95633b}
+.accuracy-report-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;color:#82909c;font-size:7px;line-height:1.4}
+.accuracy-report-detection,.accuracy-report-correction,.accuracy-report-note{margin:6px 0 0;color:#66788a;font-size:8px;line-height:1.4;overflow-wrap:anywhere}
+.accuracy-report-correction{color:#168178}
+.accuracy-report-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.accuracy-report-actions .button{min-height:28px;height:28px;padding-inline:8px;font-size:8px}
+.accuracy-load-more{min-height:30px;height:30px;margin-top:8px;font-size:8px}
+.accuracy-partial-note{margin:7px 0;color:#8996a1;font-size:8px;line-height:1.4}
+.accuracy-track-inspector{display:grid;gap:10px;min-width:0}
+.accuracy-inspector-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.accuracy-inspector-heading .eyebrow{margin:0 0 3px;font-size:8px}
+.accuracy-inspector-heading h3{margin:0;color:#34495d;font-size:13px}
+.accuracy-inspector-heading p{margin:4px 0 0;color:#81909d;font-size:8px}
+.accuracy-identity-note{padding:7px;font-size:8px}
+.accuracy-track-summary{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:#6d7e8d;font-size:8px}
+.accuracy-track-summary strong{color:#34495d;font-size:11px}
+.accuracy-coverage{padding:3px 6px;border-radius:9px;background:#e9f6f2;color:#1b806f}
+.accuracy-coverage.truncated{background:#fff2e5;color:#946238}
+.accuracy-track-contributions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.accuracy-track-contributions>div{display:grid;align-content:start;gap:4px;min-width:0;padding:7px;border:1px solid #e6ecef;border-radius:5px;background:#fff}
+.accuracy-track-contributions strong{color:#687b8d;font-size:7px;text-transform:uppercase;letter-spacing:.35px}
+.accuracy-track-contributions>div>span{display:flex;flex-wrap:wrap;gap:5px;color:#465b6e;font-size:8px;line-height:1.4;overflow-wrap:anywhere}
+.accuracy-color-observation{display:inline-flex;align-items:center;gap:3px}
+.accuracy-color-observation i{width:8px;height:8px;border:1px solid #64748266;border-radius:50%}
+.accuracy-trajectory{display:grid;gap:4px;padding:8px;border:1px solid #e5ecef;border-radius:5px;background:#f8fafb}
+.accuracy-trajectory strong{color:#526679;font-size:8px}
+.accuracy-trajectory svg{width:100%;height:95px;overflow:hidden;background:linear-gradient(90deg,transparent 24.8%,#dfe7eb 25%,transparent 25.2%,transparent 49.8%,#dfe7eb 50%,transparent 50.2%,transparent 74.8%,#dfe7eb 75%,transparent 75.2%),linear-gradient(0deg,transparent 24.8%,#dfe7eb 25%,transparent 25.2%,transparent 49.8%,#dfe7eb 50%,transparent 50.2%,transparent 74.8%,#dfe7eb 75%,transparent 75.2%);color:#168d85}
+.accuracy-trajectory circle{fill:#158e87}
+.accuracy-trajectory small{color:#83919e;font-size:7px;line-height:1.4}
+.accuracy-observation-list{display:grid;gap:4px;max-height:230px;overflow:auto;overscroll-behavior:contain}
+.accuracy-observation-list>strong{color:#53687b;font-size:8px}
+.accuracy-observation-row{display:grid;grid-template-columns:auto 1fr auto;gap:4px 7px;padding:6px;border-bottom:1px solid #e9eef0;color:#5d7184;font-size:7px;line-height:1.4}
+.accuracy-observation-time{font-variant-numeric:tabular-nums;color:#34495d}
+.accuracy-observation-row>span:nth-child(2){min-width:0;overflow-wrap:anywhere}
+.accuracy-observation-row>span:nth-child(4),.accuracy-observation-row>small{grid-column:2/-1;color:#8794a0}
+.accuracy-report-evidence-toggle{margin-top:7px;min-height:30px}
+.accuracy-report-evidence{display:grid;gap:8px;margin:8px 0;padding:10px;border:1px solid var(--border,#dbe4e8);border-radius:10px;background:var(--surface-subtle,#f7f9fa)}
+.accuracy-report-evidence-meta{display:flex;flex-wrap:wrap;gap:5px 10px;color:var(--text-muted,#627586);font-size:11px}
+.accuracy-report-image-stage{position:relative;width:100%;overflow:hidden;border-radius:8px;background:#111}
+.accuracy-report-image-stage>img{display:block;width:100%;height:100%;object-fit:contain}
+.accuracy-report-image-box{position:absolute;border:2px solid;pointer-events:none}
+.accuracy-report-image-box.original{border-color:#ffcf45;box-shadow:0 0 0 1px #111}
+.accuracy-report-image-box.duplicate{border-color:#60c9ff;border-style:dotted;box-shadow:0 0 0 1px #111}
+.accuracy-report-image-box.correction{border-color:#67e7a2;border-style:dashed;box-shadow:0 0 0 1px #111}
+.accuracy-report-evidence-caption{display:flex;align-items:center;gap:6px;margin:0;color:var(--text-muted,#627586);font-size:11px;overflow-wrap:anywhere}
+.accuracy-report-evidence-caption>span{width:9px;height:9px;flex:0 0 9px;border:2px solid #ffcf45}
+.accuracy-report-evidence-caption>span.correction-key{border-color:#319c62;border-style:dashed}
+.accuracy-report-evidence-caption>span.duplicate-key{border-color:#1683bf;border-style:dotted}
+.accuracy-report-context{color:var(--text,#23313c);font-size:12px}
+.accuracy-report-context summary{cursor:pointer;font-weight:650}
+.accuracy-report-context dl{display:grid;grid-template-columns:minmax(100px,.35fr) minmax(0,1fr);gap:5px 10px;margin:8px 0 0}
+.accuracy-report-context dt{color:var(--text-muted,#627586);font-weight:600}
+.accuracy-report-context dd{margin:0;overflow-wrap:anywhere}
+.observation-action-link{border:0;padding:2px 4px;background:transparent;color:var(--link,#276f9b);font:inherit;font-weight:650;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.observation-action-link:focus-visible{outline:2px solid var(--focus,#287aa8);outline-offset:2px;border-radius:3px}
+.observation-report-action{min-height:28px;padding:3px 8px;font-size:11px}
+.accuracy-observations-track-panel{margin-top:14px;padding:14px;border:1px solid var(--border,#dbe4e8);border-radius:14px;background:var(--surface,#fff)}
+:root[data-theme="dark"] .accuracy-report-evidence{background:#19252e;border-color:#34434f}
+:root[data-theme="dark"] .accuracy-report-context{color:#dce6ed}
+:root[data-theme="dark"] .accuracy-report-evidence-meta,:root[data-theme="dark"] .accuracy-report-evidence-caption,:root[data-theme="dark"] .accuracy-report-context dt{color:#a7b6c2}
+:root[data-theme="dark"] .observation-action-link{color:#8bc7eb}
+:root[data-theme="dark"] .accuracy-observations-track-panel{background:#151f27;border-color:#34434f}
+@media(max-width:760px){.accuracy-review-backdrop{align-items:flex-start;padding:8px}.modal-card.accuracy-review-dialog{width:calc(100vw - 16px);max-width:none;max-height:calc(100vh - 16px);padding:13px}.accuracy-review-grid{grid-template-columns:minmax(0,1fr);gap:11px}.accuracy-evidence-stage{max-height:38vh}.accuracy-review-identity{font-size:7px}.accuracy-review-identity .accuracy-immutable-badge{margin-left:0}.accuracy-feedback-form{padding:10px}.accuracy-track-contributions{grid-template-columns:1fr 1fr}.accuracy-report-actions .button{flex:1}.accuracy-evidence-placeholder{min-height:150px}}
+@media(max-width:390px){.accuracy-track-contributions{grid-template-columns:1fr}.accuracy-review-dialog>.modal-heading h2{font-size:15px}.accuracy-review-dialog>.modal-heading p{font-size:8px}.accuracy-review-identity{gap:4px}.accuracy-report-meta{font-size:6px}}
+:root[data-theme="dark"] .accuracy-review-dialog>.modal-heading h2,:root[data-theme="dark"] .accuracy-detection-list>strong,:root[data-theme="dark"] .accuracy-form-header strong,:root[data-theme="dark"] .accuracy-report-kind,:root[data-theme="dark"] .accuracy-inspector-heading h3,:root[data-theme="dark"] .accuracy-track-summary strong,:root[data-theme="dark"] .accuracy-observation-time{color:#dce6ed}
+:root[data-theme="dark"] .accuracy-review-identity,:root[data-theme="dark"] .accuracy-feedback-form,:root[data-theme="dark"] .accuracy-report-card,:root[data-theme="dark"] .accuracy-track-contributions>div{background:#192633;border-color:#34434f}
+:root[data-theme="dark"] .accuracy-review-tabs{border-color:#34434f}
+:root[data-theme="dark"] .accuracy-review-tabs button{color:#9aaab7}
+:root[data-theme="dark"] .accuracy-review-tabs button[aria-selected=true]{color:#89ddd2;border-color:#3ab5aa}
+:root[data-theme="dark"] .accuracy-review-identity,:root[data-theme="dark"] .accuracy-review-dialog>.modal-heading p,:root[data-theme="dark"] .accuracy-evidence-header,:root[data-theme="dark"] .accuracy-detection-list>button,:root[data-theme="dark"] .accuracy-form-header span,:root[data-theme="dark"] .accuracy-field,:root[data-theme="dark"] .accuracy-track-summary,:root[data-theme="dark"] .accuracy-track-contributions>div>span,:root[data-theme="dark"] .accuracy-observation-row,:root[data-theme="dark"] .accuracy-report-meta,:root[data-theme="dark"] .accuracy-report-detection,:root[data-theme="dark"] .accuracy-report-note{color:#a7b6c2}
+:root[data-theme="dark"] .accuracy-detection-list>button{background:#1b2a36;border-color:#394956}
+:root[data-theme="dark"] .accuracy-detection-list>button.selected{background:#1c3738;border-color:#3e9289;color:#9ce1d5}
+:root[data-theme="dark"] .accuracy-evidence-placeholder,:root[data-theme="dark"] .accuracy-trajectory{background:#182531;border-color:#394956;color:#a7b6c2}
+:root[data-theme="dark"] .accuracy-evidence-placeholder strong,:root[data-theme="dark"] .accuracy-trajectory strong,:root[data-theme="dark"] .accuracy-track-contributions strong,:root[data-theme="dark"] .accuracy-observation-list>strong{color:#c5d2dc}
+:root[data-theme="dark"] .accuracy-evidence-header>span,:root[data-theme="dark"] .accuracy-draw-help,:root[data-theme="dark"] .accuracy-field small,:root[data-theme="dark"] .accuracy-empty,:root[data-theme="dark"] .accuracy-partial-note,:root[data-theme="dark"] .accuracy-observation-row>span:nth-child(4),:root[data-theme="dark"] .accuracy-observation-row>small{color:#97a8b5}
+:root[data-theme="dark"] .accuracy-field select,:root[data-theme="dark"] .accuracy-field textarea,:root[data-theme="dark"] .accuracy-report-filter select,:root[data-theme="dark"] .accuracy-detection-list>button{background:#1b2a36;border-color:#3a4a57;color:#d3dee6}
+:root[data-theme="dark"] .accuracy-partial-callout,:root[data-theme="dark"] .accuracy-identity-note{background:#1d3335;border-color:#315a58;color:#b4d1ce}
+:root[data-theme="dark"] .accuracy-bbox-state,:root[data-theme="dark"] .accuracy-report-meta,:root[data-theme="dark"] .accuracy-observation-row{border-color:#34434f}
+:root[data-theme="dark"] .accuracy-report-correction{color:#8bd9ce}
+:root[data-theme="dark"] .accuracy-review-status{background:#293641;color:#b2c0ca}
+:root[data-theme="dark"] .accuracy-review-status.reviewed{background:#1c3c36;color:#8ad5b7}
+:root[data-theme="dark"] .accuracy-review-status.dismissed{background:#453628;color:#e4bd91}
+:root[data-theme="dark"] .accuracy-checkbox,:root[data-theme="dark"] .accuracy-box-coordinates label{color:#a7b6c2}
+:root[data-theme="dark"] .accuracy-box-coordinates input{background:#1b2a36;border-color:#3a4a57;color:#d3dee6}
+:root[data-theme="dark"] .accuracy-report-error,:root[data-theme="dark"] .accuracy-inline-error{background:#3a2d2e;color:#ffaaa2}
+:root[data-theme="dark"] .accuracy-success{color:#87d8b5}
+:root[data-theme="dark"] .accuracy-coverage{background:#1c3c36;color:#8ad5b7}
+:root[data-theme="dark"] .accuracy-coverage.truncated{background:#453628;color:#e4bd91}
+:root[data-theme="dark"] .viewer-report-frame{background:#1b3a3a;border-color:#3b7973;color:#a0e4d9}
+:root[data-theme="dark"] .viewer-report-frame:hover:not(:disabled){background:#224947;border-color:#57978f}
+.accuracy-consumed-draft{display:grid;justify-items:start;gap:12px;padding:24px;border:1px solid var(--border,#dbe4e8);border-radius:12px;background:var(--surface-subtle,#f7f9fa)}
+.accuracy-consumed-draft p{margin:0;color:var(--text-muted,#627586)}

@@ -1,0 +1,18 @@
+# Local Python environments and generated outputs, including future macOS envs.
+.venv*/
+venv/
+env/
+.tmp/
+.temp/
+.cache/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Model weights and runtime downloads are intentionally provisioned separately.
+models/
+
+# Python bytecode.
+*.py[cod]

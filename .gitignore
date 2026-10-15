@@ -1,0 +1,52 @@
+# Local credentials and machine-specific environment files. Keep only templates.
+.env*
+!.env.example
+!**/.env.example
+
+# Persistent application state, camera media, and local analysis data.
+/data/
+/uploads/
+**/uploads/
+**/source/
+/docs/evidence/
+/docs/QA_REPORT.md
+
+# Local work products and caches.
+/.tmp/
+/.temp/
+/.npm-cache/
+/.turbo/
+**/.tmp/
+**/.temp
+**/.cache/
+**/.turbo/
+**/dist/
+**/coverage/
+*.log
+*.tsbuildinfo
+
+# Dependencies and Python environments/artifacts.
+**/node_modules/
+**/.venv/
+**/.venv-*/
+**/venv/
+**/env/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.egg-info/
+**/models/
+*.py[cod]
+
+# Scratch files, backups, and OS/editor metadata.
+*.tmp
+*.bak
+*.backup
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

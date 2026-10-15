@@ -1,0 +1,11 @@
+{
+  "name": "@traffic-dash/vision",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/python-runner.mjs build",
+    "typecheck": "node scripts/python-runner.mjs typecheck",
+    "test": "node scripts/python-runner.mjs test"
+  }
+}

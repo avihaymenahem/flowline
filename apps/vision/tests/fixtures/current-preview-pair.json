@@ -1,0 +1,9 @@
+{
+  "frame": [1920, 1080],
+  "tileRects": [[0, 486, 1056, 1080], [864, 486, 1920, 1080]],
+  "coordinateNote": "Normalized boxes copied from the current preview review; tile rectangles are inferred from the configured 1920x1080 crop layout, not stored with that preview.",
+  "detections": [
+    {"trackId": "138", "class": "truck", "confidence": 0.936, "bboxXYXY": [0.497, 0.571, 0.642, 0.733], "tileIndex": 1},
+    {"trackId": "146", "class": "car", "confidence": 0.782, "bboxXYXY": [0.497, 0.597, 0.55, 0.730], "tileIndex": 0}
+  ]
+}

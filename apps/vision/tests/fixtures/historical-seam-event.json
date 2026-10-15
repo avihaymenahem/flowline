@@ -1,0 +1,105 @@
+{
+  "eventId": "bb1aaf34fde2852afb68637b9d595a50cbc91204911c2cb81dc69bd9652186a2",
+  "sessionId": "fbdee164-f72b-491a-b8c1-96fefd2b03b2",
+  "sourceTimeMs": 576140.000000014,
+  "frame": [
+    1920,
+    1080
+  ],
+  "quality": {
+    "coverage": "known",
+    "notes": [
+      "sampled frames only; this event does not claim full video coverage",
+      "temporal_scope=sampled_frames_only",
+      "sample_interval_ms=500.0",
+      "processing_ms=157.5",
+      "detector_mode=full_frame_tiled;detector_regions=4",
+      "detector_backend=yolo26;detector_model=YOLO26 Medium (COCO, imgsz=1280, nms=True);detector_device=cuda:0",
+      "detector_input_size=1280;detector_nms=True",
+      "detector_near_identical_cross_class_suppressed=0;iou_threshold=0.985",
+      "observations_include_untracked=true;crossings_require_active_tracks",
+      "spatial_scope=full_frame_tiled;each_sampled_frame_is_tiled_across_entire_frame"
+    ]
+  },
+  "detections": [
+    {
+      "class": "car",
+      "trackId": "128",
+      "confidence": 0.9308,
+      "bboxNormalized": {
+        "x": 0.3652552604675293,
+        "y": 0.7440389279966001,
+        "width": 0.18450797398885088,
+        "height": 0.24145584106445317
+      },
+      "bboxPixels": {
+        "x": 701.2901000976562,
+        "y": 803.5620422363281,
+        "width": 354.2553100585937,
+        "height": 260.77230834960943
+      }
+    },
+    {
+      "class": "car",
+      "trackId": "123",
+      "confidence": 0.927,
+      "bboxNormalized": {
+        "x": 0.450303513991336,
+        "y": 0.7442911783854167,
+        "width": 0.14413707337031761,
+        "height": 0.24146711561414924
+      },
+      "bboxPixels": {
+        "x": 864.5827468633652,
+        "y": 803.83447265625,
+        "width": 276.7431808710098,
+        "height": 260.7844848632812
+      }
+    },
+    {
+      "class": "car",
+      "trackId": "129",
+      "confidence": 0.8524,
+      "bboxNormalized": {
+        "x": 0.11463865439097086,
+        "y": 0.7007117942527489,
+        "width": 0.19537854989369707,
+        "height": 0.20392713193540213
+      },
+      "bboxPixels": {
+        "x": 220.10621643066406,
+        "y": 756.7687377929688,
+        "width": 375.1268157958984,
+        "height": 220.2413024902343
+      }
+    }
+  ],
+  "pair": {
+    "trackIds": [
+      "128",
+      "123"
+    ],
+    "iou": 0.43330816997353605,
+    "thirdVehicleTrackId": "129",
+    "thirdPairIou": [
+      0,
+      0
+    ]
+  },
+  "tileGeometry": {
+    "tileSize": [
+      1056,
+      594
+    ],
+    "startsX": [
+      0,
+      864
+    ],
+    "startsY": [
+      0,
+      486
+    ],
+    "track128Right": 1055.54541015625,
+    "track123Left": 864.5827468633652
+  }
+}

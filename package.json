@@ -1,0 +1,18 @@
+{
+  "name": "local-traffic-tracker",
+  "private": true,
+  "version": "0.1.0",
+  "engines": { "node": ">=20" },
+  "packageManager": "npm@10.8.2",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --filter=@traffic/api --filter=@traffic-dash/web",
+    "setup:vision": "pwsh -NoProfile -File apps/vision/setup.ps1",
+    "setup:mac": "node apps/vision/scripts/setup-mac.mjs",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": { "turbo": "^2.5.0", "typescript": "^5.8.3" }
+}

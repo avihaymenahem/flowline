@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traffic-dash-vision"
+version = "0.1.0"
+description = "Local traffic detection and counting worker"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy==2.5.4",
+  "opencv-python-headless==5.0.0.93",
+  "onnxruntime==1.23.2; platform_system == 'Darwin' and platform_machine == 'x86_64'",
+  "onnxruntime==1.31.0; platform_system != 'Darwin' or platform_machine != 'x86_64'",
+  "yt-dlp==2026.10.10.233141.dev0",
+  "yt-dlp-ejs==0.8.0"
+]
+
+[project.optional-dependencies]
+gpu = ["onnxruntime-gpu[cuda,cudnn]==1.31.0; platform_system == 'Windows'"]
+test = []
+
+[tool.setuptools]
+py-modules = ["worker", "vision_core", "youtube_source"]

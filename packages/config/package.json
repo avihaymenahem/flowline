@@ -1,0 +1,8 @@
+{
+  "name": "@traffic/config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { "./typescript": "./typescript.json" },
+  "scripts": { "build": "node -e \"console.log('Shared config package')\"", "typecheck": "node -e \"console.log('No source files to typecheck')\"", "test": "node --test" }
+}
